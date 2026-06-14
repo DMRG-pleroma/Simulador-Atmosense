@@ -1,0 +1,6 @@
+{
+  "name": "AtmoSense",
+  "description": "Sistema de Agricultura de Precisão com simulador interativo de telemetria ESP32 e balanço hídrico em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

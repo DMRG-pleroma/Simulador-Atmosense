@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Nunito:wght@400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@keyframes s-color-pulse {
+  0%, 100% {
+    color: #475569; /* slate-600 */
+  }
+  50% {
+    color: #047857; /* emerald-700 */
+  }
+}
+
+@keyframes page-transition {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-page {
+  animation: page-transition 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-s-pulse {
+  animation: s-color-pulse 3.5s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar styles for light dashboard */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e2e8f0; /* slate-200 */
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8; /* slate-400 */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* slate-500 */
+}
+
+/* Custom Cursor styles */
+body.custom-cursor-enabled,
+.custom-cursor-enabled * {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="2"></circle></svg>') 10 10, auto !important;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-track {
+  background: #18181b; /* zinc-900 */
+}
+.custom-scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #3f3f46; /* zinc-700 */
+}
+.custom-scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: #52525b; /* zinc-600 */
+}
+
+.custom-cursor-enabled button,
+.custom-cursor-enabled a,
+.custom-cursor-enabled input,
+.custom-cursor-enabled select,
+.custom-cursor-enabled [cursor="pointer"] {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23047857" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="2" fill="%23047857"></circle></svg>') 12 12, pointer !important;
+}
+
+.custom-cursor-enabled button:active,
+.custom-cursor-enabled a:active {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%23E2725B" stroke="%23E2725B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>') 10 10, pointer !important;
+}
+
